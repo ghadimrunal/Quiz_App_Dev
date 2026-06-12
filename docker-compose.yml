@@ -1,23 +1,14 @@
+version: "3.8"
+
 services:
+  frontend:
+    build: ./frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
 
   backend:
     build: ./backend
-
-    container_name: quiz-backend
-
     ports:
       - "4000:4000"
-
-    env_file:
-      - ./backend/.env
-
-  frontend:
-    build: ./frontend
-
-    container_name: quiz-frontend
-
-    ports:
-      - "3000:80"
-
-    depends_on:
-      - backend
