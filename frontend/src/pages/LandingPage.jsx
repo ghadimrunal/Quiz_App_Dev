@@ -46,7 +46,7 @@ const LandingPage = () => {
             onClick={() => navigate("/login")}
             className="inline-flex items-center gap-3 px-8 py-3 rounded-full bg-white/80 backdrop-blur-sm border border-gray-200 text-slate-700 font-semibold shadow hover:scale-[1.02] transition"
           >
-            Login
+            Sign in
           </button>
         </div>
       </section>
