@@ -29,9 +29,9 @@ pipeline {
         }
 
         stage('Deploy using Ansible') {
-            steps {
-                sh 'ansible-playbook -i ansible/inventory.ini ansible/deploy.yml'
-            }
-        }
+    steps {
+        sh 'wsl bash -lc "cd /mnt/c/ProgramData/Jenkins/.jenkins/workspace/mern-devops-pipeline && ansible-playbook -i ansible/inventory.ini ansible/deploy.yml"'
+    }
+}
     }
 }
