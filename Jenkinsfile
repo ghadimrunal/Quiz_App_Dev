@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git branch: 'main', url: 'YOUR_GIT_REPO'
+                git branch: 'main', url: 'https://github.com/ghadimrunal/Quiz_App_Dev.git'
             }
         }
 
