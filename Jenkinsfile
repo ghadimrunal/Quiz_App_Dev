@@ -27,10 +27,10 @@ pipeline {
             }
         }
 
-    //     stage('Deploy using Ansible') {
-    // steps {
-    //     sh 'ansible-playbook -i ansible/inventory.ini ansible/deploy.yml'
-    // }
-// }
+        stage('Deploy using Ansible') {
+    steps {
+        sh 'wsl ansible-playbook -i ansible/inventory.ini ansible/deploy.yml'
+    }
+}
     }
 }
