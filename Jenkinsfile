@@ -2,6 +2,7 @@ pipeline {
     agent any
 
     stages {
+
         stage('Checkout Code') {
             steps {
                 git branch: 'main', url: 'https://github.com/ghadimrunal/Quiz_App_Dev.git'
@@ -28,9 +29,9 @@ pipeline {
         }
 
         stage('Deploy using Ansible') {
-    steps {
-        sh 'wsl ansible-playbook -i ansible/inventory.ini ansible/deploy.yml'
-    }
-}
+            steps {
+                sh 'ansible-playbook -i ansible/inventory.ini ansible/deploy.yml'
+            }
+        }
     }
 }
